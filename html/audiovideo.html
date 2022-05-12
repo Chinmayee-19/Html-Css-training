@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="playpause()">play/pause</button>
+    <button onclick="makebig()">big</button>
+    <button onclick="makesmall()">small</button>
+
+    <video id="movies" onmouseover="this.play()" onmouseout="this.pause()"
+    autobuffer ="true"   width="32px" height="240px" >
+        <source src="video1.mp4" type='video/mp4'></video>
+        <script>
+            var myvideo=doc.getElementById('movies')
+            function playpause(){
+                if(myvideo.paused)
+                myvideo.play()
+                else
+                myvideo.pause()
+            }
+            function makebig(){
+                myvideo.width=440
+            }
+            function makesmall(){
+                myvideo.width=320;
+            }
+        </script>
+    
+</body>
+</html>

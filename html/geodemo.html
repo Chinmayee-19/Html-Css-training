@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="getLocation()">load</button>
+    <p id='show'></p>
+    <script>
+        var x=document.getElementById('show')
+        function getLocation(){
+            navigator.geolocation.getCurrentPosition(showPosition)
+        }
+        function showPosition(position){
+            x.innerHTML="Latitude "+position.coords.latitude +"<br> longitude "+ position.coords.longitude
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+</head>
+<body>
+    <button id=b1>Create database</button>
+    <script>
+        var db
+        $(document).ready(function(){
+            $('#b1').click(function(){
+                db=openDatabase('user','1.01','users DB','20000');
+                alert('db created')
+            })
+            $('#b1').click(function(){
+                db.transaction(function(t){
+                    t.executeSql('Create table if not exists UserProfile(fname string,lname string)')
+                    t.executeSql('Insert into UserProfile(fname,lname) values(?,?)',['admin','manager'])
+                })
+            })
+        })
+    </script>
+</body>
+</html>

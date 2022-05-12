@@ -1,0 +1,26 @@
+
+#div-container{
+    border-radius: 25px 40px 10px;
+    background-image: linear-gradient(white,blue);
+    padding: 20px;
+    width: 200px;
+    height: 140px;
+}
+#div-container2{
+    border-radius: 50px;
+    background-color: darkgray;
+    visibility: visible;
+    animation-name: app;
+    animation-duration: 5s;
+    position: relative;
+    animation-iteration-count: 3;
+    height: fit-content;
+    width: fit-content;
+}
+@keyframes app {
+    0%{background-color: purple;left: 0px;top:0px;}
+    25%{background-color: pink;left: 200px;top:0px;}
+    50%{background-color: red;left: 200px;top:200px;}
+    75%{background-color: cornflowerblue;left: 0px;top:200px;}
+    100%{background-color: purple;left: 0px;top:0px;}
+}

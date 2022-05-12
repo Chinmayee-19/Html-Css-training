@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Registration Form</legend>
+        <form >
+            Username: <input type="text" required/>
+            <br/>
+            <br/>
+            Password: <input type="password" required/>
+            <br/><br/>
+            Email: <input type="email" required/>
+            <br/><br/>
+            Age: <input type="number" min=18 max=70>
+            <br/><br/>
+            City: <input list="Cities" name='City'/>
+            <datalist id='Cities'>
+                <option value="Hyderabad">
+                    <option value="Banglore">
+                        <option value="Kolkata">
+            </datalist>
+            <button>Sign up</button>
+        </form>
+    </fieldset>
+    
+</body>
+</html>
